@@ -77,6 +77,7 @@ const AdminDashboard = () => {
                                 </>
                             ) : (
                                 <>
+                                    <MenuItem icon={<BsFillCartFill />}> <Link activeStyle={activeStyle} to={`admin/users`}>Manage User</Link></MenuItem>
                                     <MenuItem icon={<BsFillCartFill />}> <Link activeStyle={activeStyle} to={`admin/make-admin`}>Make Admin</Link></MenuItem>
                                     <MenuItem icon={<BsFillCartFill />}> <Link activeStyle={activeStyle} to={`admin/make-teacher`}>Make Teacher</Link></MenuItem>
                                     <MenuItem icon={<FaUserTie />}> <Link activeStyle={activeStyle} to={`admin/add-tutor`}>Add Tutor</Link></MenuItem>

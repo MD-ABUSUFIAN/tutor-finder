@@ -35,6 +35,7 @@ import MakeTeacher from './Pages/Admin/MakeTeacher/MakeTeacher';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import TeacherRoute from './Pages/Login/TeacherRoute/TeacherRoute';
 import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
+import AllUsers from './Pages/Admin/AllUsers/AllUsers';
 
 
 function App() {
@@ -62,8 +63,10 @@ function App() {
             </Route>
 
             {/* Admin*/}
-            <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>}>
-              <Route exact path="/admin" element={<AdminRoute><MakeAdmin /></AdminRoute>}>
+            <Route path="/" element={<AdminRoute><AdminDashboard /></AdminRoute>}>
+              <Route exact path="/admin" element={<AdminRoute><AllUsers /></AdminRoute>}>
+              </Route>
+              <Route path={`admin/users`} element={<AdminRoute><AllUsers /></AdminRoute>}>
               </Route>
               <Route path={`admin/make-admin`} element={<AdminRoute><MakeAdmin /></AdminRoute>}>
               </Route>
